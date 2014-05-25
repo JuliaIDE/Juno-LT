@@ -1,0 +1,6 @@
+{:+ {:app [(:lt.objs.plugins/load-keymap "jupiter.keymap")
+           :lt.objs.langs.julia/connect-on-startup
+           (:lt.object/add-tag :app.june-dark-autocomplete)]
+
+     :editor [(:lt.objs.style/set-theme "june")
+               :lt.objs.editor/line-numbers]}}
