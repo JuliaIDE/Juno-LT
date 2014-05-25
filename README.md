@@ -1,7 +1,7 @@
 Jupiter
 =======
 
-Jupiter is an environment for the Julia language, with strong support for interactive development and a whole load of other niceties. It's implemented on top of Light Table, using the Jewel plugin and a set of great defaults for Julia development.
+Jupiter is an environment for the Julia language, with strong support for interactive development and a whole load of other niceties. It's implemented on top of Light Table, using the [Jewel](http://github.com/one-more-minute/Jewel-LT) plugin and a set of great defaults for Julia development.
 
 ![Screenshot](screenshot.png)
 
@@ -19,3 +19,14 @@ Note: to execute commands, `Ctrl+Space` the type the command's name.
 * Open a `.jl` file (or press `Ctrl-n` for a new one), type something, `Ctrl+Enter` to evaluate the line.
 
 When an update is available, first `Pkg.update()` in Julia, then use the "update all outdated" command in Light Table.
+
+# Useful Shortcuts
+
+`C` = `Ctrl` (Windows, Linux), `Cmd` (OS X)
+
+* `Ctrl-d`: Toggle docs
+* `Ctrl-m`: Toggle methods
+* `C-;`: Show autocomplete
+* `C-/`: Toggle comments
+* `C-Enter`: Evaluate current block
+* `C-Shift-Enter`: Evaluate whole file
