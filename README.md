@@ -7,7 +7,7 @@ Jupiter is an environment for the Julia language, with strong support for intera
 
 ## Instructions
 
-Note: to execute commands, `Ctrl+Space` the type the command's name.
+Note: to execute commands, `Ctrl+Space` then type the command's name.
 
 * Install the plugin with Light Table's plugin manager ("show plugin manager" command, search for "Jupiter").
 
