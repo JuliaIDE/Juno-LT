@@ -1,8 +1,6 @@
 Jupiter
 =======
 
-(Note: This plugin is not yet available in the plugin manager, so the instructions below won't work.)
-
 Jupiter is an environment for the Julia language, with strong support for interactive development and a whole load of other niceties. It's implemented on top of Light Table, using the [Jewel](http://github.com/one-more-minute/Jewel-LT) plugin and a set of great defaults for Julia development.
 
 ![Screenshot](screenshot.png)
