@@ -3,6 +3,7 @@
                                            :exts [:jl]
                                            :mime "text/julia"
                                            :tags [:editor.julia]})]
-        "pmeta-t" [:navigate-workspace]
         "pmeta-/" [:toggle-comment-selection]
-        "pmeta-;" [:auto-complete.force]}}}
+        "pmeta-;" [:auto-complete.force]}
+
+  :editor.keys.hinting.active {"enter" [:passthrough]}}}}
