@@ -6,7 +6,8 @@
   "desc": "Turn Light Table into a Julia IDE",
   "dependencies": {
     "Jewel": "0.5.0",
-    "June": "0.1.0"
+    "June": "0.1.0",
+    "Reminisce": "0.1.0"
   },
   "behaviors": "jupiter.behaviors"
 }
