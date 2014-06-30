@@ -5,6 +5,6 @@ Juno is an environment for the Julia language, with strong support for interacti
 
 Please see [the wiki](https://github.com/one-more-minute/Jupiter-LT/wiki) for installation instructions and documentation.
 
-Note that Juno is halfway through a rename, and used to be called "Jupiter". Sorry for any confusion this causes.
+Note that Juno is halfway through a rename, and used to be called "Jupiter". In general the naming issue is a mess at the moment, so sorry for any confusion this causes.
 
 ![Screenshot](screenshot.png)
