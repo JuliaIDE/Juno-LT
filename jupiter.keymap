@@ -4,6 +4,7 @@
                                            :mime "text/julia"
                                            :tags [:editor.julia]})]
         "pmeta-/" [:toggle-comment-selection]
-        "pmeta-;" [:auto-complete.force]}
+        "pmeta-;" [:auto-complete.force]
+        "ctrl-shift-c" [:editor.interrupt-clients]}
 
   :editor.keys.hinting.active {"enter" [:passthrough]}}}}
