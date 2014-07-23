@@ -7,4 +7,4 @@
         "pmeta-;" [:auto-complete.force]
         "ctrl-shift-c" [:editor.interrupt-clients]}
 
-  :editor.keys.hinting.active {"enter" [:passthrough]}}}}
+  :editor.keys.hinting.active {"enter" [:passthrough]}}}
