@@ -6,3 +6,11 @@
 .julia {
   font-family: 'DejaVu Sans';
 }
+
+#statusbar {
+  cursor: default;
+}
+
+.inline-result, .underline-result, .inline-exception {
+  cursor: default;
+}
