@@ -18,7 +18,9 @@
           :triggers #{:object.instant}
           :reaction (fn [this]
                       (-> this object/->content js/$ .hide)
-                      (callback 0 #(show (object/->content this)))))
+                      (callback 0 #(show (object/->content this)))
+                      (callback 200 #(when (:ed @this)
+                                       (ed/refresh (:ed @this))))))
 
 (behavior ::clear-mark
           :triggers #{:clear!}
