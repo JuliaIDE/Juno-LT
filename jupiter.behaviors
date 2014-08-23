@@ -11,8 +11,4 @@
      :inline [:lt.plugins.flow/animate-on-show
               :lt.plugins.flow/clear-mark]
      :inline.underline-result [:lt.plugins.flow/ex-clear]
-     :inline.exception [:lt.plugins.flow/ex-clear]}
-
- :- {:inline.result [:lt.objs.eval/clear-mark]
-     :inline.underline-result [:lt.objs.eval/ex-clear]
-     :inline.exception [:lt.objs.eval/ex-clear]}}
+     :inline.exception [:lt.plugins.flow/ex-clear]}}
