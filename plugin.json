@@ -1,7 +1,7 @@
 {
   "name": "Juno",
   "author": "Mike Innes",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "source": "https://github.com/one-more-minute/Juno-LT",
   "desc": "Turn Light Table into a Julia IDE",
   "dependencies": {
