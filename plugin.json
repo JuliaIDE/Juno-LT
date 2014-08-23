@@ -1,11 +1,11 @@
 {
-  "name": "Jupiter",
+  "name": "Juno",
   "author": "Mike Innes",
-  "version": "0.7.0",
-  "source": "https://github.com/one-more-minute/Jupiter-LT",
+  "version": "0.7.1",
+  "source": "https://github.com/one-more-minute/Juno-LT",
   "desc": "Turn Light Table into a Julia IDE",
   "dependencies": {
-    "Jewel": "0.7.0",
+    "Julia": "0.7.1",
     "June": "0.2.0",
     "Reminisce": "0.3.0"
   },
