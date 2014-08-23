@@ -7,7 +7,7 @@
   "dependencies": {
     "Julia": "0.7.1",
     "June": "0.2.0",
-    "Reminisce": "0.3.0"
+    "Reminisce": "0.3.1"
   },
   "behaviors": "jupiter.behaviors"
 }
