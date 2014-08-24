@@ -6,7 +6,8 @@
            (:lt.object/add-tag :app.june-dark-autocomplete)]
 
      :editor [(:lt.objs.style/set-theme "june")
-               :lt.objs.editor/line-numbers]
+              :lt.objs.editor/line-numbers
+              :lt.objs.editor/scroll-past-end]
 
      :inline [:lt.plugins.flow/animate-on-show
               :lt.plugins.flow/clear-mark]
