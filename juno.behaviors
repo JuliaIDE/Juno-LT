@@ -1,6 +1,6 @@
-{:+ {:app [(:lt.objs.plugins/load-js "jupiter_compiled.js")
+{:+ {:app [(:lt.objs.plugins/load-js "juno_compiled.js")
            (:lt.objs.plugins/load-js "js/jquery-2.1.1.min.js")
-           (:lt.objs.plugins/load-keymap "jupiter.keymap")
+           (:lt.objs.plugins/load-keymap "juno.keymap")
            (:lt.objs.plugins/load-css "css/flow.css")
            :lt.objs.langs.julia.proc/connect-on-startup
            (:lt.object/add-tag :app.june-dark-autocomplete)]
