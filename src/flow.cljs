@@ -1,7 +1,7 @@
 (ns lt.plugins.flow
   (:require [lt.util.dom :as dom]
             [lt.object :as object]
-            [lt.objs.editor :as ed]
+            [lt.objs.editor :as editor]
             [crate.core :as crate])
   (:require-macros [lt.macros :refer [behavior defui]]))
 
@@ -14,33 +14,36 @@
 (defn hide [dom]
   (-> dom js/$ (.hide 200)))
 
+(defn has-valid-editor? [result]
+  (editor/->cm-ed (:ed @result)))
+
 (behavior ::animate-on-show
           :triggers #{:object.instant}
-          :reaction (fn [this]
-                      (-> this object/->content js/$ .hide)
-                      (callback 0 #(show (object/->content this)))
-                      (callback 200 #(when (:ed @this)
-                                       (ed/refresh (:ed @this))))))
+          :reaction (fn [result]
+                      (-> result object/->content js/$ .hide)
+                      (callback 0 #(show (object/->content result)))
+                      (callback 200 #(when (has-valid-editor? result)
+                                       (editor/refresh (:ed @result))))))
 
 (behavior ::clear-mark
           :triggers #{:clear!}
-          :reaction (fn [this]
-                      (hide (object/->content this))
+          :reaction (fn [result]
+                      (hide (object/->content result))
                       (callback 0.2
-                       #(when (deref (:ed @this))
-                          (js/CodeMirror.off (:line @this) "change" (:listener @this))
-                          (js/CodeMirror.off (:line @this) "delete" (:delete @this))
-                          (when (:mark @this) (.clear (:mark @this)))
-                          (object/raise this :clear)
-                          (object/raise this :cleared)))))
+                       #(when (has-valid-editor? result)
+                          (js/CodeMirror.off (:line @result) "change" (:listener @result))
+                          (js/CodeMirror.off (:line @result) "delete" (:delete @result))
+                          (when (:mark @result) (.clear (:mark @result)))
+                          (object/raise result :clear)
+                          (object/raise result :cleared)))))
 
 (behavior ::ex-clear
           :triggers #{:clear!}
-          :reaction (fn [this]
-                      (hide (object/->content this))
+          :reaction (fn [ex]
+                      (hide (object/->content ex))
                       (callback 0.2
                        #(do
-                          (when (ed/->cm-ed (:ed @this))
-                            (ed/remove-line-widget (ed/->cm-ed (:ed @this)) (:widget @this)))i
-                          (object/raise this :clear)
-                          (object/raise this :cleared)))))
+                          (when (has-valid-editor? ex)
+                            (editor/remove-line-widget (editor/->cm-ed (:ed @ex)) (:widget @ex)))i
+                          (object/raise ex :clear)
+                          (object/raise ex :cleared)))))
