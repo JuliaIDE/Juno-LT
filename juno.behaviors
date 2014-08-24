@@ -1,13 +1,12 @@
-{:+ {:app [(:lt.objs.plugins/load-js "juno_compiled.js")
-           (:lt.objs.plugins/load-js "js/jquery-2.1.1.min.js")
-           (:lt.objs.plugins/load-keymap "juno.keymap")
+{:+ {:app [(:lt.objs.plugins/load-keymap "juno.keymap")
            (:lt.objs.plugins/load-css "css/flow.css")
            :lt.objs.langs.julia.proc/connect-on-startup
            (:lt.object/add-tag :app.june-dark-autocomplete)]
 
      :editor [(:lt.objs.style/set-theme "june")
               :lt.objs.editor/line-numbers
-              :lt.objs.editor/scroll-past-end]
+              :lt.objs.editor/scroll-past-end
+              :lt.objs.langs.julia.patch/backspace-indent]
 
      :inline [:lt.plugins.flow/animate-on-show
               :lt.plugins.flow/clear-mark]
