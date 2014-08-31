@@ -2,9 +2,11 @@
   <img src="juno.png" width="300px" style="margin-left:auto;margin-right:auto;" />
 </p>
 
-Juno is an environment for the Julia language, with strong support for interactive development and a whole load of other niceties. It's implemented on top of Light Table, using the [Jewel](http://github.com/one-more-minute/Jewel-LT) plugin and a set of great defaults for Julia development.
+Juno is an environment for the Julia language, with strong support for interactive development and a whole load of other niceties, implemented over Light Table.
 
-Please see [the wiki](https://github.com/one-more-minute/Juno-LT/wiki) for installation instructions and documentation.
+Please see [the wiki](https://github.com/one-more-minute/Juno-LT/wiki) for installation instructions and documentation, and the [Julia-LT](https://github.com/one-more-minute/Julia-LT/issues) repo for issues.
+
+Note that the [Julia language plugin](https://github.com/one-more-minute/Julia-LT) provides the core functionailty; this repo is essentially a thin wrapper which exposes that functionality and provides a more convenient set of defaults.
 
 ![Screenshot](screenshot.png)
 
