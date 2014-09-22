@@ -3,6 +3,12 @@
   border-top-right-radius: 4px;
 }
 
+.result-mark {
+  max-width:  none;
+  max-height: none;
+  overflow: hidden;
+}
+
 .julia {
   font-family: 'DejaVu Sans';
 }
