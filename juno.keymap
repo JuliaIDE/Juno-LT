@@ -1,8 +1,6 @@
 {:+
- {:app {"pmeta-n" [:new-file (:set-syntax {:name "Julia"
-                                           :exts [:jl]
-                                           :mime "text/julia"
-                                           :tags [:editor.julia]})]
+ {:app {"pmeta-n" [:julia.new]
+        "pmeta-t" [:new-file]
         "pmeta-/" [:toggle-comment-selection]
         "pmeta-;" [:auto-complete.force]
         "ctrl-shift-c" [:editor.interrupt-clients]}
