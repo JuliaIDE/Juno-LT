@@ -1,8 +1,11 @@
 {:+
  {:app {"pmeta-n" [:julia.new]
         "pmeta-t" [:new-file]
-        "pmeta-/" [:toggle-comment-selection]
-        "pmeta-;" [:auto-complete.force]
         "ctrl-shift-c" [:editor.interrupt-clients]}
+
+  :editor {"shift-enter" [:eval.one.move]
+           "ctrl-m" [:editor.methods.toggle]
+           "pmeta-/" [:toggle-comment-selection]
+           "pmeta-;" [:auto-complete.force]}
 
   :editor.keys.hinting.active {"enter" [:passthrough]}}}
