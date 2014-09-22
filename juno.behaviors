@@ -1,4 +1,5 @@
 {:+ {:app [(:lt.objs.plugins/load-keymap "juno.keymap")
+           (:lt.objs.plugins/load-js "juno_compiled.js")
            (:lt.objs.plugins/load-css "css/flow.css")
            :lt.objs.langs.julia.proc/connect-on-startup
            (:lt.object/add-tag :app.june-dark-autocomplete)]
