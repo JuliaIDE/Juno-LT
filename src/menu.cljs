@@ -23,7 +23,7 @@
                              (cmd-item "Navigator" :navigate-workspace-transient)
                              {:type "separator"}
                              (cmd-item "Save file" :save)
-                             (cmd-item "Save file as.." :save-as)
+                             (cmd-item "Save file as..." :save-as)
                              (cmd-item "Close file" :tabs.close {:key "w"})
                              (cmd-item "Reopen closed file" :reminisce.reopen-tab)]}
 
@@ -63,7 +63,7 @@
                              {:type "separator"}
                              (cmd-item "Clear Console" :clear-console)]}
 
-    {:label "Eval" :submenu [(cmd-item "Eval Block" :eval-editor-form)
+    {:label "Evaluation" :submenu [(cmd-item "Eval Block" :eval-editor-form)
                              (cmd-item "Eval & Move" :eval.one.move)
                              (cmd-item "Eval All" :eval-editor)
                              {:type "separator"}
