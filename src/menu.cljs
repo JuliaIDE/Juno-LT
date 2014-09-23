@@ -1,7 +1,9 @@
 (ns lt.plugins.juno.menus
   (:require [lt.objs.menu :as menu :refer [cmd-item]]
             [lt.objs.platform :as platform]
-            [lt.objs.sidebar.command :as cmd])
+            [lt.objs.sidebar.command :as cmd]
+            [lt.util.dom :as dom]
+            [lt.object :as object])
   (:require-macros [lt.macros :refer [behavior]]))
 
 ;; Application menus
@@ -81,8 +83,17 @@
 
 (set! menu/main-menu main-menu)
 
-(main-menu)
-
 (def gui (js/require "nw.gui"))
 
 (set! (-> gui .-Window .get .-title) "Juno")
+
+;; Result menu
+
+(behavior ::result-menu!
+          :triggers #{:menu!}
+          :reaction (fn [this ev]
+                      (-> (menu/menu [{:label "Remove result"
+                                       :click (fn [] (object/raise this :clear!))}])
+                          (menu/show-menu (.-clientX ev) (.-clientY ev)))
+                      (dom/prevent ev)
+                      (dom/stop-propagation ev)))
