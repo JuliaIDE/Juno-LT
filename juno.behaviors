@@ -2,7 +2,8 @@
            (:lt.objs.plugins/load-js "juno_compiled.js")
            (:lt.objs.plugins/load-css "css/flow.css")
            :lt.objs.langs.julia.proc/connect-on-startup
-           (:lt.object/add-tag :app.june-dark-autocomplete)]
+           (:lt.object/add-tag :app.june-dark-autocomplete)
+           :lt.objs.langs.julia/light-theme]
 
      :editor [(:lt.objs.style/set-theme "june")
               :lt.objs.editor/line-numbers
