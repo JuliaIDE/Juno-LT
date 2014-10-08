@@ -17,7 +17,9 @@
      :inline.exception [:lt.plugins.flow/ex-clear
                         :lt.plugins.juno.menus/result-menu!]}
 
- :- {:inline.result [:lt.objs.eval/clear-mark
+ :- {:app [:lt.objs.intro/show-intro]
+
+     :inline.result [:lt.objs.eval/clear-mark
                      :lt.objs.eval/result-menu!]
      :inline.underline-result [:lt.objs.eval/ex-clear
                                :lt.objs.eval/result-menu!]
