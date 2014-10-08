@@ -7,7 +7,8 @@
      :editor [(:lt.objs.style/set-theme "june")
               :lt.objs.editor/line-numbers
               :lt.objs.editor/scroll-past-end
-              :lt.objs.langs.julia.patch/backspace-indent]
+              :lt.objs.langs.julia.patch/backspace-indent
+              (:lt.objs.editor/tab-settings false 2 2)]
 
      :inline [:lt.plugins.flow/animate-on-show
               :lt.plugins.flow/clear-mark
