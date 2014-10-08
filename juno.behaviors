@@ -4,7 +4,8 @@
            :lt.objs.langs.julia.proc/connect-on-startup
            (:lt.object/add-tag :app.june-dark-autocomplete)]
 
-     :editor [:lt.objs.editor/line-numbers
+     :editor [(:lt.objs.style/set-theme "june")
+              :lt.objs.editor/line-numbers
               :lt.objs.editor/scroll-past-end
               :lt.objs.langs.julia.patch/backspace-indent
               (:lt.objs.editor/tab-settings false 2 2)]
