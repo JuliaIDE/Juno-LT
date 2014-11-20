@@ -1,6 +1,9 @@
 {:+
  {:app {"pmeta-n" [:julia.new]
         "pmeta-t" [:new-file]
+        "pmeta-k-b" [:workspace.show]
+        "ctrl-`" [:toggle-console]
+        "pmeta-shift-p" [:show-commandbar]
         "ctrl-shift-c" [:editor.interrupt-clients]}
 
   :editor {"shift-enter" [:eval.one.move]
