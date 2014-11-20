@@ -3,7 +3,8 @@
            (:lt.objs.plugins/load-css "css/flow.css")
            :lt.objs.langs.julia.proc/connect-on-startup
            (:lt.object/add-tag :app.june-dark-autocomplete)
-           :lt.objs.langs.julia/light-theme]
+           :lt.objs.langs.julia/light-theme
+           :lt.objs.settings/pair-keymap-diffs]
 
      :editor [(:lt.objs.style/set-theme "june")
               :lt.objs.editor/line-numbers
