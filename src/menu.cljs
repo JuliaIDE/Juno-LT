@@ -11,8 +11,8 @@
 (defn main-menu []
   (menu/set-menubar
    [(when (platform/mac?)
-      {:label "" :submenu [{:label "Hide Juno" :key "h" :selector "hide:"}
-                           {:label "Hide Others" :key "h" :modifiers "cmd-alt" :selector "hideOtherApplications:"}
+      {:label "" :submenu [{:label "Hide Juno" :accelerator "Command+H" :selector "hide:"}
+                           {:label "Hide Others" :accelerator "Command+Alt+H" :selector "hideOtherApplications:"}
                            {:type "separator"}
                            (cmd-item "Quit" :quit {:accelerator "Command+Q"})]})
 
@@ -30,15 +30,15 @@
                              (cmd-item "Reopen closed file" :reminisce.reopen-tab)]}
 
     (if (platform/mac?)
-      {:label "Edit" :submenu [(cmd-item "Undo" :editor.undo {:selector "undo:" :key "z"})
-                               (cmd-item "Redo" :editor.redo {:selector "redo:" :key "z" :modifiers "cmd-shift"})
+      {:label "Edit" :submenu [(cmd-item "Undo" :editor.undo {:selector "undo:" :accelerator "CommandOrControl+Z"})
+                               (cmd-item "Redo" :editor.redo {:selector "redo:" :accelerator "CommandOrControl+Shift+Z"})
                                {:type "separator"}
-                               (cmd-item "Cut" :editor.cut {:selector "cut:" :key "x"})
-                               (cmd-item "Copy" :editor.copy {:selector "copy:" :key "c"})
-                               (cmd-item "Paste" :editor.paste {:selector "paste:" :key "v"})
+                               (cmd-item "Cut" :editor.cut {:selector "cut:" :accelerator "CommandOrControl+X"})
+                               (cmd-item "Copy" :editor.copy {:selector "copy:" :accelerator "CommandOrControl+C"})
+                               (cmd-item "Paste" :editor.paste {:selector "paste:" :accelerator "CommandOrControl+V"})
                                {:type "separator"}
                                (cmd-item "Select Block" :editor.select-block {:key "a" :modifiers "cmd-shift"})
-                               (cmd-item "Select All" :editor.select-all {:selector "selectAll:" :key "a"})
+                               (cmd-item "Select All" :editor.select-all {:selector "selectAll:" :accelerator "CommandOrControl+A"})
                                {:type "separator"}
                                (cmd-item "Comment Selection" :toggle-comment-selection)]}
       {:label "Edit" :submenu [(cmd-item "Undo" :editor.undo)
