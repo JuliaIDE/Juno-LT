@@ -1,6 +1,7 @@
 (ns lt.plugins.juno.menus
   (:require [lt.objs.menu :as menu :refer [cmd-item]]
             [lt.objs.platform :as platform]
+            [lt.objs.app :as app]
             [lt.objs.sidebar.command :as cmd]
             [lt.util.dom :as dom]
             [lt.object :as object])
@@ -85,7 +86,7 @@
   (set! menu/main-menu main-menu))
 
 (if platform/atom-shell
-  nil
+  (.setTitle app/win "Juno")
   (do
     (def gui (js/require "nw.gui"))
     (set! (-> gui .-Window .get .-title) "Juno")))
