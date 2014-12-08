@@ -11,10 +11,10 @@
 (defn main-menu []
   (menu/set-menubar
    [(when (platform/mac?)
-      {:label "" :submenu [{:label "Hide Light Table" :key "h" :selector "hide:"}
+      {:label "" :submenu [{:label "Hide Juno" :key "h" :selector "hide:"}
                            {:label "Hide Others" :key "h" :modifiers "cmd-alt" :selector "hideOtherApplications:"}
                            {:type "separator"}
-                           (cmd-item "Quit" :quit {:key "q"})]})
+                           (cmd-item "Quit" :quit {:accelerator "Command+Q"})]})
 
     {:label "File" :submenu [(cmd-item "New file" :julia.new)
                              (cmd-item "New plain file" :new-file)
@@ -81,11 +81,14 @@
 
 ;; Setup
 
-(set! menu/main-menu main-menu)
+(when platform/atom-shell
+  (set! menu/main-menu main-menu))
 
-(def gui (js/require "nw.gui"))
-
-(set! (-> gui .-Window .get .-title) "Juno")
+(if platform/atom-shell
+  nil
+  (do
+    (def gui (js/require "nw.gui"))
+    (set! (-> gui .-Window .get .-title) "Juno")))
 
 ;; Result menu
 
