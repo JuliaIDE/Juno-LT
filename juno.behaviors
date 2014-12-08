@@ -23,8 +23,11 @@
  :- {:app [:lt.objs.intro/show-intro]
 
      :inline.result [:lt.objs.eval/clear-mark
-                     :lt.objs.eval/result-menu!]
+                     :lt.objs.eval/result-menu!
+                     :lt.objs.menu/menu!]
      :inline.underline-result [:lt.objs.eval/ex-clear
-                               :lt.objs.eval/result-menu!]
+                               :lt.objs.eval/result-menu!
+                               :lt.objs.menu/menu!]
      :inline.exception [:lt.objs.eval/ex-clear
-                        :lt.objs.eval/result-menu!]}}
+                        :lt.objs.eval/result-menu!
+                        :lt.objs.menu/menu!]}}
