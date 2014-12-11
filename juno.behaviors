@@ -4,7 +4,8 @@
            :lt.objs.langs.julia.proc/connect-on-startup
            (:lt.object/add-tag :app.june-dark-autocomplete)
            :lt.objs.langs.julia/light-theme
-           :lt.objs.settings/pair-keymap-diffs]
+           :lt.objs.settings/pair-keymap-diffs
+           :lt.plugins.juno.tutorial/tutorial]
 
      :editor [(:lt.objs.style/set-theme "june")
               :lt.objs.editor/line-numbers
