@@ -61,8 +61,8 @@
                              {:type "separator"}
                              (cmd-item "Object Browser" :julia.browser)
                              {:type "separator"}
-                             {:label "Julia Packages" :click #(platform/open "http://pkg.julialang.org/")}
-                             {:label "Julia Docs" :click #(platform/open "http://docs.julialang.org/")}
+                             {:label "Julia Packages" :click #(platform/open-url "http://pkg.julialang.org/")}
+                             {:label "Julia Docs" :click #(platform/open-url "http://docs.julialang.org/")}
                              {:type "separator"}
                              (cmd-item "Clear Console" :clear-console)]}
 
@@ -76,9 +76,9 @@
                              (cmd-item "Interrupt Julia" :editor.interrupt-clients)
                              (cmd-item "Kill Julia" :editor.kill-clients)]}
 
-    {:label "Help" :submenu [{:label "Juno Docs" :click #(platform/open "http://junolab.org/docs/")}
-                             {:label "Julia Docs" :click #(platform/open "http://docs.julialang.org/")}
-                             {:label "Report an Issue" :click #(platform/open "https://github.com/one-more-minute/Julia-LT/issues?state=open")}]}]))
+    {:label "Help" :submenu [{:label "Juno Docs" :click #(platform/open-url "http://junolab.org/docs/")}
+                             {:label "Julia Docs" :click #(platform/open-url "http://docs.julialang.org/")}
+                             {:label "Report an Issue" :click #(platform/open-url "https://github.com/one-more-minute/Julia-LT/issues?state=open")}]}]))
 
 ;; Setup
 
