@@ -1,11 +1,20 @@
 # Welcome.
 
+# This is a regular file, which you can edit as much as you want,
+# then save for later or discard. You can open a fresh copy by
+# pressing `Ctrl-Space` and typing `tutorial` followed by `Enter`.
+
+# If you have issues, please let me know at
+# https://groups.google.com/forum/#!forum/juno-users
+
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
 # In Juno we'll be using the Julia language. This is a Julia file and
-# lines beginning with # are comments.
+# lines beginning with `#` are comments.
 
-# Here's some very simple code:
+# Here's a very simple code block:
 
-3*6+4
+3 * 6 + 4
 
 # We can evaluate code by right clicking on it and selecting "Evaluate".
 # You should see the result, "22", pop up next to the code.
@@ -22,7 +31,7 @@ function double(x)
   return 2x
 end
 
-# Click anywhere within the function definition and press `Ctrl-Enter`
+# Click anywhere on the function definition and press `Ctrl-Enter`
 # again. You should see a tick pop up next to the "end" to show that
 # the function has been defined.
 
@@ -46,3 +55,72 @@ x = rand(5, 5)
 # click on the function's name (like "rand" above) and click "Show Docs".
 # The shortcut for this is Ctrl-D. You can also remove the documentation
 # by right clicking and selecting "Remove result".
+
+# Let's try installing a package, then do some visualisation.
+
+Pkg.add("")
+
+# If you start to type `Images` between the quotes, you should see the
+# autocomplete pop up with a list of packages. Select `Images` with tab
+# and evaluate to install the package. You'll see a working indicator
+# in the bottom-left corner as the package is loaded. Type `Ctrl-Space`
+# followed `toggle console` and `Enter` to see the output.
+
+# Now you can load the package.
+
+using Images
+
+# Let's try visualising this function. You can type latex symbols by
+# typing a `\` and selecting from the autocomplete, e.g. `\phi` or `\le`.
+
+# You can use `Shift-Enter` to quickly evaluate definitions.
+
+const ϕ = golden
+
+function foo(z)
+  c = (φ-2)+(φ-1)im
+  max = 80
+  for n = 1:max
+    abs(z) ≥ 2 && return n-1
+    z = z^2 + c
+  end
+  return max
+end
+
+foo(x, y) = foo(x + y*im)
+
+# Let's try this out – play around with the numbers!
+
+foo(0)
+foo(0.1+0.5im)
+
+# Let's apply foo to a grid of numbers. Don't worry too much if you don't
+# understand this code, but make sure to evaluate it. (Bonus points for
+# using that Ctrl-D trick here, though)
+
+foo_grid(n) =
+  broadcast(foo,
+            linspace(-0.5, 1, n)',
+            linspace(-1, 0.5, n))
+
+# Can you see the pattern?
+
+foo_grid(10)
+
+# Let's try it as an image:
+
+convert(Image, scale(foo_grid(500), 1/80))
+
+# It's a Julia set, of course!
+
+# If you expand the image you can also click on the `Dictionary`
+# field to see some interesting properties about it (if that's the
+# kind of thing that floats your goat).
+
+# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+# If you want to learn more about Julia, take a look at
+# http://julialang.org/learning/
+
+# There is also the Julia manual and the Juno documentation, both
+# of which are available from the help menu above.
