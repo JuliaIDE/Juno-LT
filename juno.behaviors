@@ -1,34 +1,37 @@
-{:+ {:app [(:lt.objs.plugins/load-keymap "juno.keymap")
-           (:lt.objs.plugins/load-js "juno_compiled.js")
-           (:lt.objs.plugins/load-css "css/flow.css")
-           :lt.objs.langs.julia.proc/connect-on-startup
-           (:lt.object/add-tag :app.june-dark-autocomplete)
-           :lt.objs.langs.julia/light-theme
-           :lt.objs.settings/pair-keymap-diffs
-           :lt.plugins.juno.tutorial/tutorial]
+[
+ [:app :lt.objs.plugins/load-keymap "juno.keymap"]
+ [:app :lt.objs.plugins/load-js "juno_compiled.js"]
+ [:app :lt.objs.plugins/load-css "css/flow.css"]
+ [:app :lt.objs.langs.julia.proc/connect-on-startup]
+ [:app :lt.object/add-tag :app.june-dark-autocomplete]
+ [:app :lt.objs.langs.julia/light-theme]
+ [:app :lt.objs.settings/pair-keymap-diffs]
+ [:app :lt.plugins.juno.tutorial/tutorial]
+ [:app :-lt.objs.intro/show-intro]
 
-     :editor [(:lt.objs.style/set-theme "june")
-              :lt.objs.editor/line-numbers
-              :lt.objs.editor/scroll-past-end
-              :lt.objs.langs.julia.patch/backspace-indent
-              (:lt.objs.editor/tab-settings false 2 2)]
+ [:editor :lt.objs.style/set-theme "june"]
+ [:editor :lt.objs.editor/line-numbers]
+ [:editor :lt.objs.editor/scroll-past-end]
+ [:editor :lt.objs.langs.julia.patch/backspace-indent]
+ [:editor :lt.objs.editor/tab-settings false 2 2]
 
-     :inline [:lt.plugins.flow/animate-on-show
-              :lt.plugins.flow/clear-mark
-              :lt.plugins.juno.menus/result-menu!]
-     :inline.underline-result [:lt.plugins.flow/ex-clear
-                               :lt.plugins.juno.menus/result-menu!]
-     :inline.exception [:lt.plugins.flow/ex-clear
-                        :lt.plugins.juno.menus/result-menu!]}
+ [:inline :lt.plugins.flow/animate-on-show]
+ [:inline :lt.plugins.flow/clear-mark]
+ [:inline :lt.plugins.juno.menus/result-menu!]
 
- :- {:app [:lt.objs.intro/show-intro]
+ [:inline.exception :lt.plugins.flow/ex-clear]
+ [:inline.exception :lt.plugins.juno.menus/result-menu!]
+ [:inline.exception :-lt.objs.eval/ex-clear]
+ [:inline.exception :-lt.objs.eval/result-menu!]
+ [:inline.exception :-lt.objs.menu/menu!]
 
-     :inline.result [:lt.objs.eval/clear-mark
-                     :lt.objs.eval/result-menu!
-                     :lt.objs.menu/menu!]
-     :inline.underline-result [:lt.objs.eval/ex-clear
-                               :lt.objs.eval/result-menu!
-                               :lt.objs.menu/menu!]
-     :inline.exception [:lt.objs.eval/ex-clear
-                        :lt.objs.eval/result-menu!
-                        :lt.objs.menu/menu!]}}
+ [:inline.result :-lt.objs.eval/clear-mark]
+ [:inline.result :-lt.objs.eval/result-menu!]
+ [:inline.result :-lt.objs.menu/menu!]
+
+ [:inline.underline-result :lt.plugins.flow/ex-clear]
+ [:inline.underline-result :lt.plugins.juno.menus/result-menu!]
+ [:inline.underline-result :-lt.objs.eval/ex-clear]
+ [:inline.underline-result :-lt.objs.eval/result-menu!]
+ [:inline.underline-result :-lt.objs.menu/menu!]
+]
