@@ -87,8 +87,6 @@ function foo(z)
   return max
 end
 
-foo(x, y) = foo(x + y*im)
-
 # Let's try this out – play around with the numbers!
 
 foo(0)
@@ -97,6 +95,8 @@ foo(0.1+0.5im)
 # Let's apply foo to a grid of numbers. Don't worry too much if you don't
 # understand this code, but make sure to evaluate it. (Bonus points for
 # using that Ctrl-D trick here, though)
+
+foo(x, y) = foo(x + y*im)
 
 foo_grid(n) =
   broadcast(foo,
