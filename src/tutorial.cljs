@@ -30,6 +30,7 @@
                   (tabs/active! ed)
                   ed)]
     (editor/set-val ed tutorial-text)
+    (js/setTimeout #(editor/refresh ed) 500)
     ed))
 
 (cmd/command {:command :juno.tutorial
