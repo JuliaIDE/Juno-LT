@@ -52,7 +52,7 @@ x = rand(5, 5)
 # to expand it and see the whole matrix.
 
 # If you're not sure what a function does it's easy to find out. Just right
-# click on the function's name (like "rand" above) and click "Show Docs".
+# click on the function's name (like "rand" above) and click "Toggle Docs".
 # The shortcut for this is Ctrl-D. You can also remove the documentation
 # by right clicking and selecting "Remove result".
 
@@ -117,10 +117,10 @@ convert(Image, scale(foo_grid(500), 1/80))
 # field to see some interesting properties about it (if that's the
 # kind of thing that floats your goat).
 
-# ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
 # If you want to learn more about Julia, take a look at
 # http://julialang.org/learning/
 
 # There is also the Julia manual and the Juno documentation, both
 # of which are available from the help menu above.
+
+# Enjoy!
