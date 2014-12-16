@@ -4,8 +4,9 @@
 # then save for later or discard. You can open a fresh copy by
 # pressing `Ctrl-Space` and typing `tutorial` followed by `Enter`.
 
-# If you have issues, please let me know at
-# https://groups.google.com/forum/#!forum/juno-users
+# Use the "toggle console" command to see any output. If you have
+# issues, please let me know at
+# http://discuss.junolab.org/
 
 # ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
