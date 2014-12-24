@@ -4,9 +4,11 @@
 # then save for later or discard. You can open a fresh copy by
 # pressing `Ctrl-Space` and typing `tutorial` followed by `Enter`.
 
-# Use the "toggle console" command to see any output. If you have
-# issues, please let me know at
-# http://discuss.junolab.org/
+# (and if you remember one thing, make it `Ctrl-Space` – you can
+# get to everything in Juno via the command bar that pops up)
+
+# Go to the `View->Console` menu to see any output. If you have
+# issues, please let me know at http://discuss.junolab.org/
 
 # ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
@@ -57,18 +59,41 @@ x = rand(5, 5)
 # The shortcut for this is Ctrl-D. You can also remove the documentation
 # by right clicking and selecting "Remove result".
 
-# Let's try installing a package, then do some visualisation.
+# Let's try installing a package, so we can do some plotting.
 
 Pkg.add("")
 
-# If you start to type `Images` between the quotes, you should see the
-# autocomplete pop up with a list of packages. Select `Images` with tab
-# and evaluate to install the package. You'll see a working indicator
-# in the bottom-left corner as the package is loaded. Type `Ctrl-Space`
-# followed `toggle console` and `Enter` to see the output.
+# If you start to type `Gadfly` between the quotes (and don't already have
+# it installed), you should see the autocomplete pop up with a list of
+# packages. Select `Gadfly` with tab and evaluate to install the package.
+# You'll see a working indicator in the bottom-left corner as the package
+# is loaded. Go to the `View->Console` menu to see the output.
 
-# Now you can load the package.
+# Now you can load the package.
 
+using Gadfly
+
+# A few simple examples; if you want to learn more about Gadfly, check out
+# http://www.gadflyjl.org/
+
+# A simple scatter plot:
+plot(x = rand(10), y = rand(10))
+
+# Let's try a random walk:
+plot(x = 1:100, y = cumsum(rand(100)-0.5), Geom.point, Geom.line)
+
+# And smooth it out:
+plot(x = 1:100, y = cumsum(rand(100)-0.5), Geom.point, Geom.smooth)
+
+# We can plot functions:
+plot(x -> x^3 - 9x, -5, 5)
+plot([sin, cos], 0, 6)
+# (and remember to try sliding the values up and down here, too)
+
+# Ok, Let's try something more interesting. We'll need to install and
+# load the Images.jl package.
+
+Pkg.add("Images")
 using Images
 
 # Let's try visualising this function. You can type latex symbols by
