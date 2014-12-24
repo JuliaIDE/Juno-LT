@@ -18,6 +18,7 @@
  [:inline :lt.plugins.flow/animate-on-show]
  [:inline :lt.plugins.flow/clear-mark]
  [:inline :lt.plugins.juno.menus/result-menu!]
+ [:julia.profile-result :-lt.plugins.juno.menus/result-menu!]
 
  [:inline.exception :lt.plugins.flow/ex-clear]
  [:inline.exception :lt.plugins.juno.menus/result-menu!]
