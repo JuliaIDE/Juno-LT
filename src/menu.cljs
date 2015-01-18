@@ -67,7 +67,7 @@
                              (cmd-item "Clear Console" :clear-console)]}
 
     {:label "Evaluation" :submenu [(cmd-item "Eval Block" :eval-editor-form)
-                             (cmd-item "Eval & Move" :eval.one.move)
+                             (cmd-item "Eval and Move" :eval.one.move)
                              (cmd-item "Eval All" :eval-editor)
                              {:type "separator"}
                              (cmd-item "Show/hide Docs" :editor.doc.toggle)
