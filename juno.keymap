@@ -1,14 +1,15 @@
-{:+
- {:app {"pmeta-n" [:julia.new]
-        "pmeta-t" [:new-file]
-        "pmeta-k-b" [:workspace.show]
-        "ctrl-`" [:toggle-console]
-        "pmeta-shift-p" [:show-commandbar]
-        "ctrl-shift-c" [:editor.interrupt-clients]}
+[
+ [:app "pmeta-k-b" :workspace.show]
+ [:app "pmeta-shift-p" :show-commandbar]
+ [:app "ctrl-shift-c" :editor.interrupt-clients]
+ [:app "pmeta-n" :julia.new]
+ [:app "pmeta-t" :new-file]
+ [:app "ctrl-`" :toggle-console]
 
-  :editor {"shift-enter" [:eval.one.move]
-           "ctrl-m" [:editor.methods.toggle]
-           "pmeta-/" [:toggle-comment-selection]
-           "pmeta-;" [:auto-complete.force]}
+ [:editor "pmeta-;" :auto-complete.force]
+ [:editor "ctrl-m" :editor.methods.toggle]
+ [:editor "shift-enter" :eval.one.move]
+ [:editor "pmeta-/" :toggle-comment-selection]
 
-  :editor.keys.hinting.active {"enter" [:passthrough]}}}
+ [:editor.keys.hinting.active "enter" :passthrough]
+]
