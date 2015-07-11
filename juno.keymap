@@ -5,6 +5,7 @@
  [:app "pmeta-n" :julia.new]
  [:app "pmeta-t" :new-file]
  [:app "ctrl-`" :toggle-console]
+ [:app "pmeta-k pmeta-c" :clear-console]
 
  [:editor "pmeta-;" :auto-complete.force]
  [:editor "ctrl-m" :editor.methods.toggle]
