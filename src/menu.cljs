@@ -86,7 +86,7 @@
   (set! menu/main-menu main-menu))
 
 (if platform/atom-shell
-  (.setTitle app/win "Juno")
+  (.setTitle app/win "Juno/LT")
   (do
     (def gui (js/require "nw.gui"))
     (set! (-> gui .-Window .get .-title) "Juno")))
