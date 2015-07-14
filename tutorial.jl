@@ -59,17 +59,8 @@ x = rand(5, 5)
 # The shortcut for this is Ctrl-D. You can also remove the documentation
 # by right clicking and selecting "Remove result".
 
-# Let's try installing a package, so we can do some plotting.
-
-Pkg.add("")
-
-# If you start to type `Gadfly` between the quotes (and don't already have
-# it installed), you should see the autocomplete pop up with a list of
-# packages. Select `Gadfly` with tab and evaluate to install the package.
-# You'll see a working indicator in the bottom-left corner as the package
-# is loaded. Go to the `View->Console` menu to see the output.
-
-# Now you can load the package.
+# Let's try out some plotting. Start by loading the Gadfly package; if you
+# type `using` you'll see a list of available packages in the autocomplete.
 
 using Gadfly
 
