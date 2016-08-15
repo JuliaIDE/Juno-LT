@@ -1,3 +1,8 @@
+Note that Juno-LT is deprecated. Instead, check out [the new Juno based on Atom](http://junolab.org/).
+
+
+----------------------------
+
 <p align="center">
   <img src="juno.png" width="300px" style="margin-left:auto;margin-right:auto;" />
 </p>
