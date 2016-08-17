@@ -1,5 +1,4 @@
-Note that Juno-LT is deprecated. Instead, check out [the new Juno based on Atom](http://junolab.org/).
-
+## Note that Juno-LT is deprecated. Instead, check out [the new Juno based on Atom](http://junolab.org/).
 
 ----------------------------
 
@@ -14,5 +13,3 @@ Please see [the website](http://junolab.org/docs/install.html) for installation 
 Note that the [Julia language plugin](https://github.com/one-more-minute/Julia-LT) provides the core functionailty; this repo is essentially a thin wrapper which exposes that functionality and provides a more convenient set of defaults.
 
 ![Screenshot](screenshot.png)
-
-BitCoin: 1KqaY84xFQx6SzghtGSRUPB64cFoxMnaTB
